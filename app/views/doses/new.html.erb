@@ -1,0 +1,8 @@
+<h1><%= @cocktail.name %></h1>
+<h2>List of Ingredients</h2>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><span><%= dose.ingredient.name %>:</span><span><%= dose.description %></span></li>
+  <% end %>
+</ul>
+<%= render 'form_doses' %>
