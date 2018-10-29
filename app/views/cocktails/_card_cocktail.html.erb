@@ -1,0 +1,20 @@
+<div class="container">
+  <h2 id="c_list">Cocktails list</h2>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cocktail.photo.file.nil? ? "https://res.cloudinary.com/oulrij/image/upload/v1540593996/ksc5jlvpwbffbstfnjqg.jpg" : cloudinary_url(cocktail.photo) %>);">
+        <div class="card-description">
+          <h2><%= cocktail.name %></h2>
+        </div>
+        <%= link_to 'Details', cocktail_path(cocktail) %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+

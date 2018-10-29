@@ -1,14 +1,14 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%=  cl_image_tag("https://res.cloudinary.com/oulrij/image/upload/v1540584837/driqddh9sbskbi51pmkv.png", type: :fetch, height: 60 ) %>
   <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <!-- Links -->
-    <%= link_to 'Cocktails list', root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to 'Cocktails list', root_path(anchor: 'c_list'), class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to 'Add cocktail', new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
 

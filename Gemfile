@@ -70,5 +70,11 @@ gem 'rails-ujs'
 gem 'httparty'
 gem 'json'
 
+# Cloudinary
+gem 'cloudinary'
+
 # handling secrets
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Gem to upload files associated to Models
+gem 'carrierwave', '~> 1.2'
